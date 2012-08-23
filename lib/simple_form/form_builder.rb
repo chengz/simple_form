@@ -1,5 +1,3 @@
-require 'simple_form/core_ext/hash'
-
 module SimpleForm
   class FormBuilder < ActionView::Helpers::FormBuilder
     attr_reader :template, :object_name, :object, :wrapper
