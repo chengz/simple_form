@@ -23,7 +23,7 @@ module SimpleForm
         unless options[:html].key?(:novalidate)
           options[:html][:novalidate] = !SimpleForm.browser_validations
         end
-        options[:html][:class] = [SimpleForm.form_class, simple_form_css_class(record, options)].compact.join(" ")
+        options[:html][:class] = [SimpleForm.form_class, simple_form_css_class(record, options)].compact.join(" ") unless options[:html][:class].blank?
 
         with_simple_form_field_error_proc do
           form_for(record, options, &block)
